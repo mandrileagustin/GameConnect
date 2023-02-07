@@ -1,5 +1,6 @@
 import userQueris from "./mysql_queris/user_queris.js";
 import productQueris from "./mysql_queris/products_queris.js";
+import imagenQueris from "./mysql_queris/imagen_queris.js";
 
 const dao = {};
 ///Usuarios
@@ -15,11 +16,11 @@ dao.updateUser = async (id, userData) =>
   await userQueris.updateUser(id, userData);
 
 ///Imagenes
-dao.addImage = async (imageData) => await productQueris.addImage(imageData);
+dao.addImage = async (imageData) => await imagenQueris.addImage(imageData);
 
-dao.getImageById = async (id) => await productQueris.getImageById(id);
+dao.getImageById = async (id) => await imagenQueris.getImageById(id);
 
-dao.deleteImage = async (id) => await productQueris.deleteImage(id);
+dao.deleteImage = async (id) => await imagenQueris.deleteImage(id);
 
 ///Juegos
 dao.addJuego = async (juegoData) => await productQueris.addJuego(juegoData);

@@ -4,6 +4,7 @@ import logger from "morgan";
 import cookieParser from "cookie-parser";
 import userRouter from "./routes/user_routes.js";
 import JuegosRouter from "./routes/products_routes.js";
+import ImagenRouter from "./routes/imagen_routes.js";
 import cors from "cors";
 import fileUpload from "express-fileupload";
 import { fileURLToPath } from "url";
@@ -39,7 +40,10 @@ app.use(
 //---api  midelware---
 app.use("/user", userRouter);
 
-//---api imagenes---
+//----api juegos-----
 app.use("/juegos", JuegosRouter);
+
+//---api imagenes---
+app.use("/imagenes", ImagenRouter);
 
 export default app;
