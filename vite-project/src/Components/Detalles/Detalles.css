@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-weight: 500;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  section {
+    width: 100%;
+    padding: 0 7%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: #373b44;
+    height: 100vh;
+  }
+  
+  section:nth-last-of-type(3n+1) {
+    background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+  section:nth-last-of-type(2n-1) {
+    background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+  section:nth-last-of-type(4n-1) {
+    background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background7.jpg);
+    background-size: cover;
+  }
+  section:nth-last-of-type() {
+    background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background8.jpg);
+    background-size: cover;
+  }
+  .intro {
+    height: 90vh;
+  }
+  
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  h1 {
+    font-size: 3em;
+    display: block;
+    color: white;
+    font-weight: 300;
+  }
+  
+  p {
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #c3cad9;
+  }
+  
+  a {
+    font-weight: 700;
+    color: #373b44;
+    position: relative;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
+  a:active {
+    top: 1px;
+  }
+  
