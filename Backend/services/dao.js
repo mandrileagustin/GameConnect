@@ -1,5 +1,5 @@
 import userQueris from "./mysql_queris/user_queris.js";
-import productQueris from "./mysql_queris/products_queris.js";
+import productQueris from "./mysql_queris/juegos_queris.js";
 import imagenQueris from "./mysql_queris/imagen_queris.js";
 
 const dao = {};
