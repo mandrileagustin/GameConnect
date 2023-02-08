@@ -1,6 +1,7 @@
 import userQueris from "./mysql_queris/user_queris.js";
 import juegosQueris from "./mysql_queris/juegos_queris.js";
 import imagenQueris from "./mysql_queris/imagen_queris.js";
+import postQueris from "./mysql_queris/post_queris.js";
 
 const dao = {};
 ///Usuarios
@@ -33,4 +34,16 @@ dao.getJuegoByName = async (name) => await juegosQueris.getJuegoByName(name);
 
 dao.deleteJuego = async (id) => await juegosQueris.deleteJuego(id);
 
+///Posts
+
+dao.addPost = async (postData) => await postQueris.addPost(postData);
+
+dao.getPostById = async (id) => await postQueris.getPostById(id);
+
+dao.getPost = async () => await postQueris.getPost();
+
+dao.getPostByName = async (comentario) =>
+  await postQueris.getPostByName(comentario);
+
+dao.deletePost = async (id) => await postQueris.deletePost(id);
 export default dao;

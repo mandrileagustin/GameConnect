@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 import userRouter from "./routes/user_routes.js";
 import JuegosRouter from "./routes/juegos_routes.js";
 import ImagenRouter from "./routes/imagen_routes.js";
+import PostRouter from "./routes/post_routes.js";
+
 import cors from "cors";
 import fileUpload from "express-fileupload";
 import { fileURLToPath } from "url";
@@ -46,4 +48,6 @@ app.use("/juegos", JuegosRouter);
 //---api imagenes---
 app.use("/imagenes", ImagenRouter);
 
+//---api post---
+app.use("/post", PostRouter);
 export default app;
