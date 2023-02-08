@@ -20,10 +20,8 @@ PostQueris.addPost = async (postData) => {
   let conn = null;
   try {
     conn = await db.createConnection();
-    let postObj = {
-      comentario: postData.comentario,
-    };
-    return await db.query("INSERT INTO post SET ?", postObj, "insert", conn);
+
+    return await db.query("INSERT INTO post SET ?", postData, "insert", conn);
   } catch (e) {
     throw new Error(e);
   } finally {
@@ -38,6 +36,22 @@ PostQueris.getPostById = async (id) => {
     return await db.query(
       "SELECT * FROM post WHERE id = ?",
       id,
+      "select",
+      conn
+    );
+  } catch (e) {
+    throw new Error(e);
+  } finally {
+    conn && (await conn.end);
+  }
+};
+PostQueris.getPostByPath = async (path) => {
+  let conn = null;
+  try {
+    conn = await db.createConnection();
+    return await db.query(
+      "SELECT * FROM post WHERE path = ?",
+      path,
       "select",
       conn
     );

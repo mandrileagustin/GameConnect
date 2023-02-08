@@ -40,6 +40,8 @@ dao.addPost = async (postData) => await postQueris.addPost(postData);
 
 dao.getPostById = async (id) => await postQueris.getPostById(id);
 
+dao.getPostByPath = async (path) => await postQueris.getPostByPath(path);
+
 dao.getPost = async () => await postQueris.getPost();
 
 dao.getPostByName = async (comentario) =>

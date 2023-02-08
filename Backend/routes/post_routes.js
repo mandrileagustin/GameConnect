@@ -7,6 +7,8 @@ PostRouter.post("/addPost", PostController.addPost);
 
 PostRouter.get("/post/:id", PostController.getPostById);
 
+PostRouter.get("/post/:path", PostController.getPostByPath);
+
 PostRouter.get("/", PostController.getPost);
 
 PostRouter.get("/postName/:name", PostController.getPostByName);

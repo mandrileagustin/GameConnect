@@ -6,6 +6,9 @@ const controller = {};
 const __dirname = currentDir().__dirname;
 // controlador para subir una imagen a nuestro servidor y guardar el path en la base de datos.
 controller.uploadImage = async (req, res) => {
+  const { comentario } = req.body;
+  if (!comentario) return res.status(400).send("Error al recibir el body");
+
   try {
     // Controlamos cuando el objeto files sea null
     if (req.files === null) return;
@@ -25,15 +28,16 @@ controller.uploadImage = async (req, res) => {
     images.forEach(async (image) => {
       // Ya podemos acceder a las propiedades del objeto image.
       // Obtenemos la ruta de la imagen.
-      let uploadPath = "app/public/images/products/" + image.name;
+      let uploadPath = __dirname + "public/images/products/" + image.name;
+      let uploadRelPath = "images/products/" + image.name;
+
       // Usamos el método mv() para ubicar el archivo en nuestro servidor
       image.mv(uploadPath, (err) => {
         if (err) return res.status(500).send(err);
       });
-      await dao.addImage({
-        ruta: uploadPath,
-        idUsuario: req.query.idUsuario,
-        idJuego: req.query.idJuego,
+      await dao.addPost({
+        comentario: comentario,
+        path: uploadRelPath,
       });
     });
     return res.send("Imagen subida!");

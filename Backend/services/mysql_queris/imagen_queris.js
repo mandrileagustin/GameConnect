@@ -27,14 +27,14 @@ imagenQueris.addImage = async (imageData) => {
   }
 };
 
-imagenQueris.getImageById = async (id) => {
+imagenQueris.getImageById = async (path) => {
   // Conectamos con la base de datos y buscamos si existe la imagen por el id.
   let conn = null;
   try {
     conn = await db.createConnection();
     return await db.query(
-      "SELECT * FROM imagene WHERE id = ?",
-      id,
+      "SELECT * FROM post WHERE path = ?",
+      path,
       "select",
       conn
     );
