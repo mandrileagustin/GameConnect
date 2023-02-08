@@ -18,29 +18,54 @@
     height: 100vh;
   }
   
-  section:first-child {
+  .primero{
     background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background5.jpg);
     background-size: cover;
     background-repeat: no-repeat
   }
 
-  .second{
+  .segundo{
     background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background8.jpg);
     background-size: cover;
     background-repeat: no-repeat
     
   }
-  .imagen-second{}
 
-  .tercero{
+   .tercero{
     background-image:linear-gradient(rgba(5, 7, 12, 0.25), rgba(5, 7, 12, 0.40)),url(../../src/assets/Imagenes/background4.jpg);
     background-size: cover;
     background-repeat: no-repeat
+  }
+  .tercero h4{
+    color:rgb(206, 206, 206);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .tercero h2{
+    color:rgb(255, 255, 255)
+  }
+
+  h3{
+    color:rgb(255, 255, 255)
+  }
+  
+  h4{
+    color:rgb(255, 255, 255)
+  }
+
+  h2{
+    color:rgb(255, 255, 255)
   }
   .intro {
     height: 90vh;
   }
   
+  .intro2 {
+    height: 90vh;
+  }
+  .intro3 {
+    height: 90vh;
+  }
   .content {
     display: table-cell;
     vertical-align: middle;
@@ -56,14 +81,14 @@
   h3 {
     font-size: 3em;
     display: block;
-    color: rgb(195, 195, 195);
+    color: rgb(255, 255, 255);
     font-weight: 400;
   }
 
   p {
     font-size: 1.5em;
     font-weight: 500;
-    color: #c3cad9;
+    color: #ebeef4;
   }
   
   a {

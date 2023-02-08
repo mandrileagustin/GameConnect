@@ -35,7 +35,7 @@ controller.getJuegoById = async (req, res) => {
 
 controller.getJuego = async (req, res) => {
   try {
-    const product = await dao.getProduct();
+    const product = await dao.getJuego();
     // Si no existe devolvemos un 404 (not found)
     // Devolvemos la ruta donde se encuentra la imagen
     return res.send(product);
