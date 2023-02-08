@@ -1,10 +1,10 @@
 import db from "../mysql.js";
 
-const productQueris = {};
+const JuegosQueris = {};
 
 ///Juegos
 
-productQueris.getJuego = async () => {
+JuegosQueris.getJuego = async () => {
   let conn = null;
   try {
     conn = await db.createConnection();
@@ -15,7 +15,7 @@ productQueris.getJuego = async () => {
     conn && (await conn.end());
   }
 };
-productQueris.addJuego = async (juegoData) => {
+JuegosQueris.addJuego = async (juegoData) => {
   let conn = null;
   try {
     conn = await db.createConnection();
@@ -32,7 +32,7 @@ productQueris.addJuego = async (juegoData) => {
   }
 };
 
-productQueris.getJuegoById = async (id) => {
+JuegosQueris.getJuegoById = async (id) => {
   let conn = null;
   try {
     conn = await db.createConnection();
@@ -49,7 +49,7 @@ productQueris.getJuegoById = async (id) => {
   }
 };
 
-productQueris.getJuegoByName = async (name) => {
+JuegosQueris.getJuegoByName = async (name) => {
   let conn = null;
   try {
     conn = await db.createConnection();
@@ -65,4 +65,16 @@ productQueris.getJuegoByName = async (name) => {
     conn && (await conn.end);
   }
 };
-export default productQueris;
+
+JuegosQueris.deleteJuego = async (id) => {
+  let conn = null;
+  try {
+    conn = await db.createConnection();
+    return await db.query("DELETE FROM juegos WHERE id =?", id, "delete", conn);
+  } catch {
+    throw new Error(e);
+  } finally {
+    conn && (await conn.end);
+  }
+};
+export default JuegosQueris;

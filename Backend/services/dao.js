@@ -1,5 +1,5 @@
 import userQueris from "./mysql_queris/user_queris.js";
-import productQueris from "./mysql_queris/juegos_queris.js";
+import juegosQueris from "./mysql_queris/juegos_queris.js";
 import imagenQueris from "./mysql_queris/imagen_queris.js";
 
 const dao = {};
@@ -23,12 +23,14 @@ dao.getImageById = async (id) => await imagenQueris.getImageById(id);
 dao.deleteImage = async (id) => await imagenQueris.deleteImage(id);
 
 ///Juegos
-dao.addJuego = async (juegoData) => await productQueris.addJuego(juegoData);
+dao.addJuego = async (juegoData) => await juegosQueris.addJuego(juegoData);
 
-dao.getJuegoById = async (id) => await productQueris.getJuegoById(id);
+dao.getJuegoById = async (id) => await juegosQueris.getJuegoById(id);
 
-dao.getJuego = async () => await productQueris.getJuego();
+dao.getJuego = async () => await juegosQueris.getJuego();
 
-dao.getJuegoByName = async (name) => await productQueris.getJuegoByName(name);
+dao.getJuegoByName = async (name) => await juegosQueris.getJuegoByName(name);
+
+dao.deleteJuego = async (id) => await juegosQueris.deleteJuego(id);
 
 export default dao;

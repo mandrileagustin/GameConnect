@@ -1,14 +1,16 @@
 import express from "express";
-import productsController from "../controller/juegos_controller.js";
+import JuegosController from "../controller/juegos_controller.js";
 
-const productsRouter = express.Router();
+const JuegosRouter = express.Router();
 
-productsRouter.post("/addJuego", productsController.addJuego);
+JuegosRouter.post("/addJuego", JuegosController.addJuego);
 
-productsRouter.get("/juego/:id", productsController.getJuegoById);
+JuegosRouter.get("/juego/:id", JuegosController.getJuegoById);
 
-productsRouter.get("/", productsController.getJuego);
+JuegosRouter.get("/", JuegosController.getJuego);
 
-productsRouter.get("/juegoName/:name", productsController.getJuegoByName);
+JuegosRouter.get("/juegoName/:name", JuegosController.getJuegoByName);
 
-export default productsRouter;
+JuegosRouter.delete("/:id", JuegosController.deleteJuego);
+
+export default JuegosRouter;

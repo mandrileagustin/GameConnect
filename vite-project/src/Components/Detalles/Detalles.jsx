@@ -5,8 +5,8 @@ export default function Detalles() {
     <>
       <div className="position-relative">
         <section className="intro">
-          <div className="content position-relative d-flex mt-5">
-            <button className="btn btn-secondary rounded-4 position-absolute top-0 end-0 ">
+          <div className="content">
+            <button className="btn btn-secondary rounded-4 position-absolute top-0 end-0 mt-3 me-3">
               LOGIN
             </button>
           </div>
@@ -21,21 +21,35 @@ export default function Detalles() {
           </div>
         </section>
       </div>
-      <section>
-        <div className="content">
-          <h1>Discover new teammates</h1>
+
+      <section className="second position-relative">
+        <div className="content d-flex">
+          <div className="position-absolute top-50 end-0 translate-middle-y col-5 d-grid gap-5">
+            <div>
+              <h1>Descubre nuevos juegos y nuevas comunidades</h1>
+            </div>
+            <div>
+              <h3>
+                Rétate a ti mismo en una batalla de ingenio y habilidades con
+                amigos en los que contar.
+              </h3>
+            </div>
+          </div>
+          <div className="imagen-second">
+            <div className="w-75 position-absolute top-50 start-0 translate-middle ms-5">
+              <img
+                src="../src/assets/Imagenes/eldenring.jpg"
+                className="card-img"
+                alt="..."
+              />
+            </div>
+          </div>
         </div>
       </section>
 
-      <section>
+      <section className="tercero">
         <div className="content">
           <h1>Discover New Games</h1>
-        </div>
-      </section>
-
-      <section>
-        <div className="content">
-          <h1>Fast and Easy</h1>
         </div>
       </section>
     </>
