@@ -1,5 +1,5 @@
-import Chat from "../../../client/SignUpChat";
+import SigUpChat from "../../../client/SignUpChat";
 
 export default function ChatService() {
-  return <Chat />;
+  return <SigUpChat />;
 }

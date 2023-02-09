@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./Chat.css";
-const ChatFooter = () => {
+const ChatFooter = ({ socket }) => {
   const [message, setMessage] = useState("");
+
+  const handleTyping = () =>
+    socket.emit("typing", `${localStorage.getItem("userName")} is typing`);
 
   const handleSendMessage = (e) => {
     e.preventDefault();
@@ -24,6 +27,8 @@ const ChatFooter = () => {
           className="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
+          //Esto manda un evento cuando se escribe un mensaje a Socket.io
+          onKeyDown={handleTyping}
         />
         <button className="sendBtn">SEND</button>
       </form>
