@@ -10,7 +10,7 @@ import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
 import ChatService from "./views/Chat/SignUpToChat";
 import socketIO from "socket.io-client";
 import ChatPage from "./views/Chat/Chat";
-const socket = socketIO.connect("http://localhost:4000");
+const socket = socketIO.connect("http://127.0.0.1:4000");
 
 function App() {
   return (

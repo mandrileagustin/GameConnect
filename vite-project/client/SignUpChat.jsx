@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function Chat() {
+export default function Chat({ socket }) {
   const navigate = useNavigate();
   const [userName, setUserName] = useState("");
 
@@ -17,7 +17,6 @@ export default function Chat() {
       <label htmlFor="username">Username</label>
       <input
         type="text"
-        minLength={6}
         name="username"
         id="username"
         className="username__input"

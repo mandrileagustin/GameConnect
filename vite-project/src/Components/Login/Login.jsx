@@ -7,6 +7,7 @@ import { useAuthContext } from "../../Context/AuthContext";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+
 export default function Login() {
   const { login, authorization } = useAuthContext();
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function Login() {
                   />
                   <label>Password</label>
                 </div>
-                <Link
+                <button
                   disabled={isSubmiting}
                   type="submit"
                   value="Login"
@@ -59,7 +60,7 @@ export default function Login() {
                   <span></span>
                   <span></span>
                   Conecta
-                </Link>
+                </button>
               </Form>
             </div>
           )}

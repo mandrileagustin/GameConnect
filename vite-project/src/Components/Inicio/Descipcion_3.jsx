@@ -1,4 +1,4 @@
-import "../Detalles/Detalles.css";
+import "../Inicio/Detalles.css";
 
 export default function Descripcion_3() {
   return (

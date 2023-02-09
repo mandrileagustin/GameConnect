@@ -1,7 +1,3 @@
-export default function BannerDescription() {
-  return (
-    <div>
-      <div className="div-imagen-fondo">wehegbwe</div>
-    </div>
-  );
+export default function DetallesUsuario() {
+  return <div>Hola</div>;
 }

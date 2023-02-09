@@ -9,7 +9,7 @@ app.use(cors());
 
 const socketIO = require("socket.io")(http, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "http://127.0.0.1:5173",
   },
 });
 
@@ -35,7 +35,7 @@ socketIO.on("connection", (socket) => {
     socketIO.emit("newUserResponse", users);
   });
 
-  socket.on("disconnect", () => {
+  socket.on("disconnect", (data) => {
     socketIO.emit("messageResponse", data);
     console.log("🔥: A user disconnected");
     //Actualiza la lista de usuarios en el servidor
@@ -55,6 +55,6 @@ app.get("/api", (req, res) => {
   });
 });
 
-app.listen(PORT, () => {
+http.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import "../Detalles/Detalles.css";
+import "../Inicio/Detalles.css";
 
 export default function Descripcion_2() {
   return (
     <div>
-      <div className=" position-relative">
+      <div className="position-relative">
         <section className="segundo">
           <div className="content d-flex">
             <div className="position-absolute top-50 end-0 translate-middle-y col-4 d-grid gap-5">
