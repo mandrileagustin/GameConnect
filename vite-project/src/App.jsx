@@ -10,6 +10,7 @@ import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
 import ChatService from "./views/Chat/SignUpToChat";
 import socketIO from "socket.io-client";
 import ChatPage from "./views/Chat/Chat";
+import PerfilUsuario from "./views/PerfilUsuario/PerfilUsuario";
 const socket = socketIO.connect("http://127.0.0.1:4000");
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           </Route>
           <Route element={<PrivateRoutes allowedRoles={[Roles.User]} />}>
             <Route path="userDetails" element={<DetallesUsuario />} />
+            <Route path="perfilUsuario" element={<PerfilUsuario />} />
           </Route>
         </Route>
       </Routes>

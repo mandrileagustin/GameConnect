@@ -9,6 +9,10 @@ const ChatPage = ({ socket }) => {
   const lastMessageRef = useRef(null);
 
   useEffect(() => {
+    socket.on("messageResponse", (data) => setMessages([...messages, data]));
+  }, [socket, messages]);
+
+  useEffect(() => {
     function fetchMessages() {
       fetch("http://localhost:4000/api")
         .then((response) => response.json())

@@ -12,18 +12,18 @@ export default function Notificaciones(message, user) {
       });
     }
   }
-}
-function sendNotification(message, user) {
-  document.onvisibilitychange = () => {
-    if (document.hidden) {
-      const notification = new Notification("New message from Open Chat", {
-        icon: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
-        body: `@${user}: ${message}`,
-      });
-      notification.onclick = () =>
-        function () {
-          window.open("http://localhost:3000/chat");
-        };
-    }
-  };
+  function sendNotification(message, user) {
+    document.onvisibilitychange = () => {
+      if (document.hidden) {
+        const notification = new Notification("New message from Open Chat", {
+          icon: "https://cdn-icons-png.flaticon.com/512/733/733585.png",
+          body: `@${user}: ${message}`,
+        });
+        notification.onclick = () =>
+          function () {
+            window.open("http://localhost:3000/chat");
+          };
+      }
+    };
+  }
 }

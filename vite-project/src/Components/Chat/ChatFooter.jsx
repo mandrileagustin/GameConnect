@@ -21,8 +21,6 @@ export default function ChatFooter({ socket }) {
     setMessage("");
   };
 
-  const Notificaciones = () => {};
-
   return (
     <div className="chat__footer">
       <form className="form" onSubmit={handleSendMessage}>

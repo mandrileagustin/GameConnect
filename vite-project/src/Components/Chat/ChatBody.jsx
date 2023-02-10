@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Chat.css";
 
-const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
+export default function ChatBody({ messages, lastMessageRef, typingStatus }) {
   const navigate = useNavigate();
 
   const handleLeaveChat = () => {
@@ -48,6 +48,4 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
       </div>
     </>
   );
-};
-
-export default ChatBody;
+}

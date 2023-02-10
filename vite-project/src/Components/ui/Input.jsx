@@ -1,5 +1,4 @@
 import { useField } from "formik";
-import "../Login/Login.css";
 
 export default function Input({ label, ...props }) {
   const [field, meta] = useField(props);
