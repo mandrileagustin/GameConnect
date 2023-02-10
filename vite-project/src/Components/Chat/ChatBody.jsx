@@ -7,7 +7,7 @@ const ChatBody = ({ messages, lastMessageRef, typingStatus }) => {
 
   const handleLeaveChat = () => {
     localStorage.removeItem("userName");
-    navigate("/");
+    navigate("/signUp");
     window.location.reload();
   };
 

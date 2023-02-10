@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Chat.css";
-const ChatFooter = ({ socket }) => {
+import Notificaciones from "../utils/Notificacion";
+
+export default function ChatFooter({ socket }) {
   const [message, setMessage] = useState("");
 
   const handleTyping = () =>
@@ -13,11 +15,14 @@ const ChatFooter = ({ socket }) => {
         text: message,
         name: localStorage.getItem("userName"),
         id: `${socket.id}${Math.random()}`,
-        socketID: socket.id,
       });
+      Notificaciones(message, localStorage.getItem("userName"));
     }
     setMessage("");
   };
+
+  const Notificaciones = () => {};
+
   return (
     <div className="chat__footer">
       <form className="form" onSubmit={handleSendMessage}>
@@ -34,6 +39,4 @@ const ChatFooter = ({ socket }) => {
       </form>
     </div>
   );
-};
-
-export default ChatFooter;
+}
