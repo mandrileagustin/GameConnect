@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./views/Home";
 import Layout from "./Components/Layout/Layout";
 import InicioDeSesion from "./views/InicioDeSesion/InicioDeSesion";
-import DetallesUsuario from "./views/CompletarUsuario/CompletarUsuario";
+import CompletarUsuario from "./views/CompletarUsuario/CompletarUsuario";
 import { Roles } from "./components/Roles/Roles";
 import RutasPublicas from "./Components/PublicRoutes/PublicRoutes";
 import PrivateRoutes from "./Components/PrivateRoutes/PrivateRoutes";
@@ -28,7 +28,7 @@ function App() {
             <Route path="login" element={<InicioDeSesion />} />
           </Route>
           <Route element={<PrivateRoutes allowedRoles={[Roles.User]} />}>
-            <Route path="userDetails" element={<DetallesUsuario />} />
+            <Route path="userDetails" element={<CompletarUsuario />} />
             <Route path="perfilUsuario" element={<PerfilUsuario />} />
           </Route>
         </Route>

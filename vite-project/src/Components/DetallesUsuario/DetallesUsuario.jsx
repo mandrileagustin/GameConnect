@@ -1,3 +1,3 @@
 export default function DetallesUsuario() {
-  return <div>Hola</div>;
+  return <p>puto guacho</p>;
 }

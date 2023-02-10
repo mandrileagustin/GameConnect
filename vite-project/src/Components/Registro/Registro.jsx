@@ -22,13 +22,13 @@ export default function Registro() {
             <input type="text" name="" required="" />
             <label>Apellido</label>
           </div>
-          <Link to={""}>
+          <button>
             <span></span>
             <span></span>
             <span></span>
             <span></span>
             Registrate
-          </Link>
+          </button>
         </form>
       </div>
     </div>

@@ -1,15 +1,36 @@
 body{
     font-family: 'Orbitron', sans-serif;
 }
-
-body .h4{
-    font-family: 'Montserrat', sans-serif;
+section {
+    width: 100%;
+    padding: 0 7%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: #373b44;
+    height: 100vh;
+  
+}
+  
+  
+  .content {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  #titulo {
+    font-size: 3em;
+    display: block;
+    color: white;
+    font-weight: 300;
+  }
+  
+#primero{
+    background-image: url(../src/assets/Imagenes/background5.jpg);
 }
 
-.h5{
-    font-family: 'Montserrat', sans-serif;
+#segundo{
+    background-image: url(../src/assets/Imagenes/background7.jpg);
 }
 
-.h6{
-    font-family: 'Montserrat', sans-serif;
-}
+  
